@@ -2,7 +2,7 @@
 
 
 let poleOtazek = [
-    { poradi: 'Otázka 1/4', obrazek: 'obrazky/azory.jpg', otazka: 'Jak se říká Azorským osrovům?', odpoved0: 'Ostrov zeleného zlata', odpoved1: 'Havaj středního Atlantiku', odpoved2: 'Perla Indického oceánu', odpoved3: '', spravnaOdpoved: 'Havaj středního Atlantiku' },
+    { poradi: 'Otázka 1/4', obrazek: 'obrazky/Azory.jpg', otazka: 'Jak se říká Azorským osrovům?', odpoved0: 'Ostrov zeleného zlata', odpoved1: 'Havaj středního Atlantiku', odpoved2: 'Perla Indického oceánu', odpoved3: '', spravnaOdpoved: 'Havaj středního Atlantiku' },
 
 
 
@@ -10,7 +10,7 @@ let poleOtazek = [
 
     { poradi: 'Otázka 3/4', obrazek: 'obrazky/zazitek.jpg', otazka: 'Co můžete zažít na Azorech?', odpoved0: 'pozorování velryb', odpoved1: 'jízda na velbloudovi', odpoved2: 'pštrosí závody', odpoved3: '', spravnaOdpoved: 'pozorování velryb' },
 
-    { poradi: 'Otázka 4/4', obrazek: 'obrazky/azory_ostrovy.jpg', otazka: 'Z kolika ostrovů se skládá souostroví Azor?', odpoved0: '6', odpoved1: '9', odpoved2: '', odpoved3: '', spravnaOdpoved: '9' }
+    { poradi: 'Otázka 4/4', obrazek: 'obrazky/Azory_ostrovy.jpg', otazka: 'Z kolika ostrovů se skládá souostroví Azor?', odpoved0: '6', odpoved1: '9', odpoved2: '', odpoved3: '', spravnaOdpoved: '9' }
 
 
 ];
