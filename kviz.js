@@ -6,7 +6,7 @@ let poleOtazek = [
 
 
 
-    { poradi: 'Otázka 2/4', obrazek: 'obrazky/syr.jpg', otazka: 'Jak se jmenuje typický sýr pocházející z Azor?', odpoved0: 'Queijo de São Jorge', odpoved1: 'Comté', odpoved2: 'Mozzarella', odpoved3: 'Téte de Moinee', spravnaOdpoved: 'Queijo de São Jorg' },
+    { poradi: 'Otázka 2/4', obrazek: 'obrazky/syr.jpg', otazka: 'Jak se jmenuje typický sýr pocházející z Azor?', odpoved0: 'Queijo de São Jorge', odpoved1: 'Comté', odpoved2: 'Mozzarella', odpoved3: 'Téte de Moinee', spravnaOdpoved: 'Queijo de São Jorge' },
 
     { poradi: 'Otázka 3/4', obrazek: 'obrazky/zazitek.jpg', otazka: 'Co můžete zažít na Azorech?', odpoved0: 'pozorování velryb', odpoved1: 'jízda na velbloudovi', odpoved2: 'pštrosí závody', odpoved3: '', spravnaOdpoved: 'pozorování velryb' },
 
