@@ -2,9 +2,9 @@
 
 
 let poleOtazek = [
-    { poradi: 'Otázka 1/3', obrazek: 'obrazky/moncicak.jpg', otazka: 'Co je ikonická hračka z 80.let?', odpoved0: 'Kočičák', odpoved1: 'Mončičák', odpoved2: 'Opičák', odpoved: 'Mončičák' },
+    { poradi: 'Otázka 1/3', obrazek: 'obrazky/moncicak.jpg', otazka: 'Co je ikonická hračka z 80.let?', odpoved0: 'Kočičák', odpoved1: 'Mončičák', odpoved2: 'Opičák', odpoved3: '', odpoved: 'Mončičák' },
     { poradi: 'Otázka 2/3', obrazek: 'obrazky/ovoce.jpg', otazka: 'Jaké je Matějovo nejoblíbenější ovoce?', odpoved0: 'Kokos', odpoved1: 'Meloun', odpoved2: 'Jahoda', odpoved3: 'Ani jedno z toho', odpoved: 'Jahoda' },
-    { poradi: 'Otázka 3/3', obrazek: 'obrazky/pivo.jpg', otazka: 'Co je potřeba pro úspěšné absolvování kurzu?', odpoved0: 'Umět JavaScript', odpoved1: 'Chodit po kurzu na pivo', odpoved2: '', odpoved: 'Umět JavaScript' }
+    { poradi: 'Otázka 3/3', obrazek: 'obrazky/pivo.jpg', otazka: 'Co je potřeba pro úspěšné absolvování kurzu?', odpoved0: 'Umět JavaScript', odpoved1: 'Chodit po kurzu na pivo', odpoved2: '', odpoved3: '', odpoved: 'Umět JavaScript' }
 
 ];
 
@@ -16,6 +16,11 @@ let otazka = document.querySelector('#otazka');
 let odpoved0 = document.querySelector('li[data-odpoved="0"]');
 let odpoved1 = document.querySelector('li[data-odpoved="1"]');
 let odpoved2 = document.querySelector('li[data-odpoved="2"]');
+let odpoved3 = document.querySelector('li[data-odpoved="3"]');
+let zvolenaOdpoved1 = '';
+let zvolenaOdpoved2 = '';
+let zvolenaOdpoved3 = '';
+
 
 let odpovedi = document.querySelector('#odpovedi');
 let kviz = document.querySelector('#kviz');
@@ -34,36 +39,39 @@ function priNacteni() {
     odpoved0.innerHTML = poleOtazek[i].odpoved0;
     odpoved1.innerHTML = poleOtazek[i].odpoved1;
     odpoved2.innerHTML = poleOtazek[i].odpoved2;
+    odpoved3.style.display = 'none';
 
 }
 
 
-/*
-if ((poleOtazek[i].odpoved3) == '') {
-    let novaPolozka = document.createElement('li [data-odpoved="3"]');
-    odpovedi.appendChild(novaPolozka);
-    document.querySelector('li[data-odpoved="3"]').innerHTML = poleOtazek[i].odpoved3;
 
-}
+function zvoleniMoznosti(event) {
 
-if ((poleOtazek[i].odpoved2) != '') {
-    odpovedi.removeChild('li [data-odpoved="2"]');
-}
-*/
+    console.log(event.srcElement.id);
 
-
-
-function zvoleniMoznosti() {
     i = i + 1;
-
+    odpoved3.style.display = 'initial';
     if (i < 3) {
+
         poradi.innerHTML = poleOtazek[i].poradi;
         obrazek.src = poleOtazek[i].obrazek;
         otazka.innerHTML = poleOtazek[i].otazka;
         odpoved0.innerHTML = poleOtazek[i].odpoved0;
         odpoved1.innerHTML = poleOtazek[i].odpoved1;
-        odpoved2.innerHTML = poleOtazek[i].odpoved2;
 
+        if ((poleOtazek[i].odpoved3) == '') {
+            odpovedi.removeChild(odpoved3);
+        }
+        else {
+            odpoved3.innerHTML = poleOtazek[i].odpoved3;
+        }
+
+        if ((poleOtazek[i].odpoved2) == '') {
+            odpovedi.removeChild(odpoved2);
+        }
+        else {
+            odpoved2.innerHTML = poleOtazek[i].odpoved2;
+        }
 
 
     }
@@ -71,12 +79,13 @@ function zvoleniMoznosti() {
 
 
     else {
-        kviz.removeChild(poradi);
-        kviz.removeChild(otazka);
-        obsah.removeChild(obrazek);
-        obsah.removeChild(moznosti);
-        kviz.innerHTML = poleOtazek[0].otazka;
 
+        /*
+                kviz.innerHTML = `<h2> Tvoje hodnocení </h2><h3>1. ${poleOtazek[0].otazka}</h3> Tvoje odpověď: ${poleOtazek[1].odpoved} <br> Správná odpověď: ${poleOtazek[0].odpoved} <h3>2. ${poleOtazek[1].otazka}</h3> Tvoje odpověď:${poleOtazek[0].otazka} <br> Správná odpověď: ${poleOtazek[1].odpoved}
+                <h3>3. ${poleOtazek[2].otazka}</h3> Tvoje odpověď:${poleOtazek[0].otazka} <br> Správná odpověď: ${poleOtazek[2].odpoved} <br> <br>
+                <h2> Správně 1 ze 3 otázek, úspěšnost je 33% </h2>`;
+        */
 
     }
 }
+
