@@ -2,7 +2,7 @@
 
 
 let poleOtazek = [
-    { poradi: 'Otázka 1/4', obrazek: 'obrazky/azory.jpg', otazka: 'Jak se říká Azorským osrovům?', odpoved0: 'Ostrov zeleného zlata', odpoved1: 'Havaj středního Atlantiku', odpoved2: 'Perla Indického oceánu', odpoved3: '', spravnaOdpoved: 'Havaj středního Atlantiku' },
+    { poradi: 'Otázka 1/4', obrazek: 'obrazky/azory1.png', otazka: 'Jak se říká Azorským ostrovům?', odpoved0: 'Ostrov zeleného zlata', odpoved1: 'Havaj středního Atlantiku', odpoved2: 'Perla Indického oceánu', odpoved3: '', spravnaOdpoved: 'Havaj středního Atlantiku' },
 
 
 
